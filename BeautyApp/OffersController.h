@@ -6,8 +6,10 @@
 //  Copyright © 2018 5399. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface OffersController : NSObject
+@interface OffersController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIButton *clickBtn;
 
 @end
