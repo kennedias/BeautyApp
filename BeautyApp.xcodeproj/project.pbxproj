@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1C8C45200DB5B7002F1BF4 /* OffersController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1C8C44200DB5B7002F1BF4 /* OffersController.m */; };
 		CE497F0B200C2B4E00ECD98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F0A200C2B4E00ECD98B /* AppDelegate.m */; };
 		CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F0D200C2B4E00ECD98B /* ViewController.m */; };
 		CE497F11200C2B4E00ECD98B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE497F0F200C2B4E00ECD98B /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE1C8C43200DB5B7002F1BF4 /* OffersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersController.h; sourceTree = "<group>"; };
+		CE1C8C44200DB5B7002F1BF4 /* OffersController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersController.m; sourceTree = "<group>"; };
 		CE497F06200C2B4E00ECD98B /* BeautyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE497F09200C2B4E00ECD98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE497F0A200C2B4E00ECD98B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				CE497F14200C2B4E00ECD98B /* LaunchScreen.storyboard */,
 				CE497F17200C2B4E00ECD98B /* Info.plist */,
 				CE497F18200C2B4E00ECD98B /* main.m */,
+				CE1C8C43200DB5B7002F1BF4 /* OffersController.h */,
+				CE1C8C44200DB5B7002F1BF4 /* OffersController.m */,
 			);
 			path = BeautyApp;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			files = (
 				CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */,
 				CE497F19200C2B4E00ECD98B /* main.m in Sources */,
+				CE1C8C45200DB5B7002F1BF4 /* OffersController.m in Sources */,
 				CE497F0B200C2B4E00ECD98B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
