@@ -99,7 +99,7 @@
         <scene sceneID="bIu-yA-F7C">
             <objects>
                 <navigationController title="Search" id="Sss-Ve-WX3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="T9a-2i-8w9"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="T9a-2i-8w9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ljk-Sg-piL">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,23 +118,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m33-ra-shP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="-307"/>
-        </scene>
-        <!--My Coupons-->
-        <scene sceneID="uDy-Bj-Uv3">
-            <objects>
-                <viewController title="My Coupons" id="ucN-Gm-QKA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fcC-53-R6f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.90875810379999999" green="0.1222326234" blue="0.38172367219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="MMq-Oc-o7E"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="My coupons" id="diM-dI-rVV"/>
-                    <navigationItem key="navigationItem" title="My Coupons" id="Zt7-kB-frf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjj-8a-Hbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="924.375" y="366.54929577464787"/>
         </scene>
         <!--My Coupons List-->
         <scene sceneID="avl-fa-4TZ">
@@ -175,7 +158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhE-dt-Qq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="1116"/>
+            <point key="canvasLocation" x="926" y="382"/>
         </scene>
         <!--My Coupons List-->
         <scene sceneID="4l8-BI-EHU">
@@ -192,7 +175,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sY7-ld-Uxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="1116"/>
+            <point key="canvasLocation" x="180" y="382"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HR9-8b-yBJ">
@@ -223,58 +206,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVY-wC-sDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717.5" y="1115"/>
-        </scene>
-        <!--My Coupons Detail-->
-        <scene sceneID="gBE-Fe-2WI">
-            <objects>
-                <viewController title="My Coupons Detail" id="Vgf-0N-4mo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="evZ-kY-MNo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Coupons Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bby-VF-9Kr">
-                                <rect key="frame" x="16" y="274" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.90875810379999999" green="0.1222326234" blue="0.38172367219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="5n3-7j-941"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PTF-kR-gha" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1717.5" y="366.54929577464787"/>
-        </scene>
-        <!--My Coupons-->
-        <scene sceneID="PG8-TU-CIx">
-            <objects>
-                <navigationController title="My Coupons" id="gco-Ud-eGH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Coupons" id="AbD-su-sg2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Cv-yp-HqP">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.68499189620000001" green="0.0042046783489999998" blue="0.2229531109" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ucN-Gm-QKA" kind="relationship" relationship="rootViewController" id="nzX-pA-0Tb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xdj-Gr-Lx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="180" y="367"/>
+            <point key="canvasLocation" x="1718" y="381"/>
         </scene>
         <!--Offers-->
         <scene sceneID="tDF-ZZ-4SV">
             <objects>
                 <navigationController title="Offers" id="aNx-dd-Qh2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Offers" id="41g-y3-i5c">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="41g-y3-i5c">
                         <color key="badgeColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T7K-kP-o21">
@@ -287,67 +225,28 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="TAw-am-zRU" kind="relationship" relationship="rootViewController" id="hgD-c1-VgX"/>
+                        <segue destination="9rY-jh-LE9" kind="relationship" relationship="rootViewController" id="HvP-H0-1dZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsj-ER-h1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="-991"/>
         </scene>
-        <!--Offers-->
-        <scene sceneID="aM2-eG-B2X">
+        <!--View Controller-->
+        <scene sceneID="8de-Nk-cH0">
             <objects>
-                <viewController title="Offers" id="TAw-am-zRU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ETf-DJ-iIe">
+                <viewController id="9rY-jh-LE9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5NH-7I-fGp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeS-V3-nvu">
-                                <rect key="frame" x="16" y="269" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Offer Detail"/>
-                                <connections>
-                                    <segue destination="ziN-fr-MxA" kind="show" id="cUg-4N-5S0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.90875810379999999" green="0.1222326234" blue="0.38172367219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="0ef-Z4-11M"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zO3-qE-bm5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Offers" id="lkw-Kt-DNg"/>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Offers" id="Qdi-kH-2ae" colorLabel="IBBuiltInLabel-Red"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" id="RfM-ns-5sQ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N3a-jc-Zrt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5uM-1c-HzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926.25" y="-992.95774647887322"/>
-        </scene>
-        <!--Offer Detail-->
-        <scene sceneID="rPv-KE-Roi">
-            <objects>
-                <viewController title="Offer Detail" id="ziN-fr-MxA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Sgs-7B-4wd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="offer detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK7-83-PcB">
-                                <rect key="frame" x="16" y="262" width="288" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.90875810379999999" green="0.1222326234" blue="0.38172367219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Ksb-WM-cPk"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Offer Detail" id="Lqa-Ht-D58"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fg4-kc-1OZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1717.5" y="-994.0140845070423"/>
+            <point key="canvasLocation" x="924" y="-992"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pK7-WJ-g2c">
@@ -427,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJP-zA-TaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1470" y="-207.04225352112675"/>
+            <point key="canvasLocation" x="-2248" y="-207"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6fh-KQ-PSa">
@@ -443,9 +342,9 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="aNx-dd-Qh2" kind="relationship" relationship="viewControllers" id="ZJq-qO-Hoq"/>
                         <segue destination="Sss-Ve-WX3" kind="relationship" relationship="viewControllers" id="Udy-XK-Da4"/>
                         <segue destination="kz4-6W-GUQ" kind="relationship" relationship="viewControllers" id="JEd-AL-IwA"/>
+                        <segue destination="aNx-dd-Qh2" kind="relationship" relationship="viewControllers" id="7Me-wB-gQw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdh-kn-ezQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -524,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePR-kV-LUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1470" y="512"/>
+            <point key="canvasLocation" x="-1470" y="352"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
