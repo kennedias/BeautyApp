@@ -1,0 +1,15 @@
+//
+//  OffersCell.h
+//  BeautyApp
+//
+//  Created by Tawny Almeida on 23/1/18.
+//  Copyright © 2018 5399. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface OffersCell : UITableViewCell
+@property(nonnull,strong) IBOutlet UIImageView *imageView;
+@property(nonnull,strong) IBOutlet UILabel *titleLbl;
+@property(nonnull,strong) IBOutlet UILabel *descriptionLbl;
+@end

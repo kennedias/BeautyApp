@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2760FD2016A138000F6CE0 /* OffersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2760FC2016A138000F6CE0 /* OffersTableViewController.m */; };
+		4C2761002016AF36000F6CE0 /* OffersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2760FF2016AF36000F6CE0 /* OffersCell.m */; };
 		CE1C8C45200DB5B7002F1BF4 /* OffersController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1C8C44200DB5B7002F1BF4 /* OffersController.m */; };
 		CE497F0B200C2B4E00ECD98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F0A200C2B4E00ECD98B /* AppDelegate.m */; };
 		CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F0D200C2B4E00ECD98B /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C2760FB2016A138000F6CE0 /* OffersTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersTableViewController.h; sourceTree = "<group>"; };
+		4C2760FC2016A138000F6CE0 /* OffersTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersTableViewController.m; sourceTree = "<group>"; };
+		4C2760FE2016AF36000F6CE0 /* OffersCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersCell.h; sourceTree = "<group>"; };
+		4C2760FF2016AF36000F6CE0 /* OffersCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersCell.m; sourceTree = "<group>"; };
 		CE1C8C43200DB5B7002F1BF4 /* OffersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersController.h; sourceTree = "<group>"; };
 		CE1C8C44200DB5B7002F1BF4 /* OffersController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersController.m; sourceTree = "<group>"; };
 		CE497F06200C2B4E00ECD98B /* BeautyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,10 @@
 				CE497F18200C2B4E00ECD98B /* main.m */,
 				CE1C8C43200DB5B7002F1BF4 /* OffersController.h */,
 				CE1C8C44200DB5B7002F1BF4 /* OffersController.m */,
+				4C2760FB2016A138000F6CE0 /* OffersTableViewController.h */,
+				4C2760FC2016A138000F6CE0 /* OffersTableViewController.m */,
+				4C2760FE2016AF36000F6CE0 /* OffersCell.h */,
+				4C2760FF2016AF36000F6CE0 /* OffersCell.m */,
 			);
 			path = BeautyApp;
 			sourceTree = "<group>";
@@ -270,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2761002016AF36000F6CE0 /* OffersCell.m in Sources */,
 				CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */,
 				CE497F19200C2B4E00ECD98B /* main.m in Sources */,
+				4C2760FD2016A138000F6CE0 /* OffersTableViewController.m in Sources */,
 				CE1C8C45200DB5B7002F1BF4 /* OffersController.m in Sources */,
 				CE497F0B200C2B4E00ECD98B /* AppDelegate.m in Sources */,
 			);
