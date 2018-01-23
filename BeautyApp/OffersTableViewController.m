@@ -19,15 +19,14 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    titles = [[NSArray alloc]initWithObjects:@"Clear Skin", @"Hair", @"Beaty Nails", @"Brazilian Wax"];
+    titles = [[NSArray alloc]initWithObjects:@"Clear Skin", @"Hair", @"Beaty Nails", @"Brazilian Wax", nil];
     descriptions = [[NSArray alloc]initWithObjects:
                     @"The best treatment for your skin!",
                     @"Your hair will be done carefully",
                     @"Change your favorite color and style.",
-                    @"The most wanted wax method now with a special price."];
-   //
-    UIImage imageIco = [UIImage imageNamed:@"beauti_ico"];
-    images = [[NSArray alloc]initWithObjects:UIImage imageNamed:@"beauti_ico", nil];
+                    @"The most wanted wax method now with a special price.", nil];
+    //UIImage *imageIco = [UIImage imageNamed:@"beauti_ico"];
+    images = [[NSArray alloc]initWithObjects: @"beauti_ico", @"beauti_ico", @"beauti_ico", @"beauti_ico", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,17 +42,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return offers.count;
+    return titles.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"offersCell" forIndexPath:indexPath];
+    OffersCell *cell = [tableView dequeueReusableCellWithIdentifier:@"offersCell" forIndexPath:indexPath];
     
     // Configure the cell...
     //cell.imageView.image = [UIImage imageNamed:@"beauti_ico"];
     //cell.textLabel.text = offers[indexPath.row];
     
+    [cell updateCellWithTitle:[titles objectAtIndex:indexPath.row] description:[descriptions objectAtIndex:indexPath.row] image:[images objectAtIndex:indexPath.row]];
     return cell;
 }
 

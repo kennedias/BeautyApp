@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OffersCell.h"
 
 @interface OffersTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 {
     NSArray *titles;
     NSArray *descriptions;
-    NSArray *imsges;
+    NSArray *images;
 }
 @end
 

@@ -12,4 +12,9 @@
 @property(nonnull,strong) IBOutlet UIImageView *imageView;
 @property(nonnull,strong) IBOutlet UILabel *titleLbl;
 @property(nonnull,strong) IBOutlet UILabel *descriptionLbl;
+
+-(void)updateCellWithTitle:(nonnull NSString *)title
+               description:(nonnull NSString *)description
+                     image:(nonnull NSString *)image;
+
 @end
