@@ -47,13 +47,21 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    OffersCell *cell = [tableView dequeueReusableCellWithIdentifier:@"offersCell" forIndexPath:indexPath];
+    [self.tableView registerNib:[UINib nibWithNibName:@"OfferCell" bundle:nil] forCellReuseIdentifier:@"offersCell"];
+    
+    OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"offersCell" forIndexPath:indexPath];
     
     // Configure the cell...
     //cell.imageView.image = [UIImage imageNamed:@"beauti_ico"];
     //cell.textLabel.text = offers[indexPath.row];
+    [cell.titleLbl setText:[titles objectAtIndex:indexPath.row]];
+    [cell.descriptionLbl setText:[descriptions objectAtIndex:indexPath.row]];
     
-    [cell updateCellWithTitle:[titles objectAtIndex:indexPath.row] description:[descriptions objectAtIndex:indexPath.row] image:[images objectAtIndex:indexPath.row]];
+    UIImage *img = [UIImage imageNamed:@"beauti_ico"];
+    
+    [cell.imageView setImage:img];
+    
+    //[cell updateCellWithTitle:[titles objectAtIndex:indexPath.row] description:[descriptions objectAtIndex:indexPath.row] image:[images objectAtIndex:indexPath.row]];
     return cell;
 }
 

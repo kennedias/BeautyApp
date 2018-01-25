@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OffersCell.h"
+#import "OfferCell.h"
 
 @interface OffersTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 {
