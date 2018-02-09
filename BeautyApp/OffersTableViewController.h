@@ -14,6 +14,7 @@
     NSArray *titles;
     NSArray *descriptions;
     NSArray *images;
+    NSMutableArray *_offers;
 }
 @end
 

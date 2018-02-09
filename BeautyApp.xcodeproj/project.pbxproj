@@ -13,6 +13,7 @@
 		CE025B5320198F470062D2F0 /* OfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE025B5120198F470062D2F0 /* OfferCell.xib */; };
 		CE099BCA202C099900BDE247 /* OfferDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE099BC9202C099900BDE247 /* OfferDetailViewController.m */; };
 		CE1C8C45200DB5B7002F1BF4 /* OffersController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1C8C44200DB5B7002F1BF4 /* OffersController.m */; };
+		CE22087E202D4CBF00C50152 /* OfferVO.m in Sources */ = {isa = PBXBuildFile; fileRef = CE22087D202D4CBF00C50152 /* OfferVO.m */; };
 		CE497F0B200C2B4E00ECD98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F0A200C2B4E00ECD98B /* AppDelegate.m */; };
 		CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F0D200C2B4E00ECD98B /* ViewController.m */; };
 		CE497F11200C2B4E00ECD98B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE497F0F200C2B4E00ECD98B /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		CE099BC9202C099900BDE247 /* OfferDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OfferDetailViewController.m; sourceTree = "<group>"; };
 		CE1C8C43200DB5B7002F1BF4 /* OffersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersController.h; sourceTree = "<group>"; };
 		CE1C8C44200DB5B7002F1BF4 /* OffersController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersController.m; sourceTree = "<group>"; };
+		CE22087C202D4CBF00C50152 /* OfferVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfferVO.h; sourceTree = "<group>"; };
+		CE22087D202D4CBF00C50152 /* OfferVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OfferVO.m; sourceTree = "<group>"; };
 		CE497F06200C2B4E00ECD98B /* BeautyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE497F09200C2B4E00ECD98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE497F0A200C2B4E00ECD98B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				CE025B5120198F470062D2F0 /* OfferCell.xib */,
 				CE099BC8202C099900BDE247 /* OfferDetailViewController.h */,
 				CE099BC9202C099900BDE247 /* OfferDetailViewController.m */,
+				CE22087C202D4CBF00C50152 /* OfferVO.h */,
+				CE22087D202D4CBF00C50152 /* OfferVO.m */,
 			);
 			path = BeautyApp;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				CE497F19200C2B4E00ECD98B /* main.m in Sources */,
 				CE099BCA202C099900BDE247 /* OfferDetailViewController.m in Sources */,
 				CE025B5220198F470062D2F0 /* OfferCell.m in Sources */,
+				CE22087E202D4CBF00C50152 /* OfferVO.m in Sources */,
 				4C2760FD2016A138000F6CE0 /* OffersTableViewController.m in Sources */,
 				CE1C8C45200DB5B7002F1BF4 /* OffersController.m in Sources */,
 				CE497F0B200C2B4E00ECD98B /* AppDelegate.m in Sources */,

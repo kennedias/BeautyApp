@@ -1,9 +1,12 @@
 
 
 #import "OffersTableViewController.h"
+#import "OfferVO.h"
+#import "OfferDetailViewController.h"
+#import "OfferCell.h"
 
 @interface OffersTableViewController (){
-    NSArray *offers;
+   // NSArray *offers;
 }
 
 @end
@@ -19,7 +22,22 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    titles = [[NSArray alloc]initWithObjects:@"Clear Skin", @"Hair", @"Beaty Nails", @"Brazilian Wax", nil];
+    _offers = [NSMutableArray array];
+    
+    OfferVO *offer1 = [[OfferVO alloc] init];
+    [offer1 setOfferImage:@"beauti_ico"];
+    [offer1 setOfferTitle:@"Clear Skin"];
+    [offer1 setOfferDescription:@"The best treatment for your skin!"];
+    [_offers addObject:offer1];
+    
+    OfferVO *offer2 = [[OfferVO alloc] init];
+    [offer2 setOfferImage:@"beauti_ico"];
+    [offer2 setOfferTitle:@"Hair"];
+    [offer2 setOfferDescription:@"Your hair will be done carefully"];
+    
+    [_offers addObject:offer2];
+    
+  /*  titles = [[NSArray alloc]initWithObjects:@"Clear Skin", @"Hair", @"Beaty Nails", @"Brazilian Wax", nil];
     descriptions = [[NSArray alloc]initWithObjects:
                     @"The best treatment for your skin!",
                     @"Your hair will be done carefully",
@@ -27,6 +45,11 @@
                     @"The most wanted wax method now with a special price.", nil];
     //UIImage *imageIco = [UIImage imageNamed:@"beauti_ico"];
     images = [[NSArray alloc]initWithObjects: @"beauti_ico", @"beauti_ico", @"beauti_ico", @"beauti_ico", nil];
+    */
+
+    NSLog(@"%@", _offers);
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,26 +65,35 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return titles.count;
+    return [_offers count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.tableView registerNib:[UINib nibWithNibName:@"OfferCell" bundle:nil] forCellReuseIdentifier:@"offersCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"OfferCell" bundle:nil] forCellReuseIdentifier:@"OffersCell"];
     
-    OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"offersCell" forIndexPath:indexPath];
+    OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OffersCell" forIndexPath:indexPath];
     
     // Configure the cell...
     //cell.imageView.image = [UIImage imageNamed:@"beauti_ico"];
     //cell.textLabel.text = offers[indexPath.row];
-    [cell.titleLbl setText:[titles objectAtIndex:indexPath.row]];
-    [cell.descriptionLbl setText:[descriptions objectAtIndex:indexPath.row]];
+    //[cell.titleLbl setText:[titles objectAtIndex:indexPath.row]];
+    //[cell.descriptionLbl setText:[descriptions objectAtIndex:indexPath.row]];
     
-    UIImage *img = [UIImage imageNamed:@"beauti_ico"];
+    //UIImage *img = [UIImage imageNamed:@"beauti_ico"];
     
-    [cell.imageView setImage:img];
+    //[cell.imageView setImage:img];
     
     //[cell updateCellWithTitle:[titles objectAtIndex:indexPath.row] description:[descriptions objectAtIndex:indexPath.row] image:[images objectAtIndex:indexPath.row]];
+    
+    OfferVO *item = [_offers objectAtIndex:indexPath.row];
+    
+    UIImage *img = [UIImage imageNamed: [item OfferImage]];
+    [cell.imageView setImage:img];
+    [cell.titleLbl setText:[item OfferTitle]];
+    [cell.descriptionLbl setText:[item OfferDescription]];
+    
+    
     return cell;
 }
 
@@ -112,7 +144,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"showOfferDetail"]) {
+    if ([[segue identifier] isEqualToString:@"showOfferDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSData *object = [_offers objectAtIndex:indexPath.row];
+        
+        [[segue destinationViewController] setOfferDetailData:object];
         
     }
 }

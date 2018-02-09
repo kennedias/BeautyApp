@@ -373,6 +373,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C8j-7l-LYc"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLbl" destination="yX0-4i-jdr" id="8bF-mP-iNt"/>
+                        <outlet property="imageView" destination="5U6-iZ-i6d" id="SfN-I6-KN1"/>
+                        <outlet property="titleLbl" destination="3C7-qf-D12" id="ul3-iS-jZX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfp-L8-8e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,9 +14,22 @@
 
 @implementation OfferDetailViewController
 
+@synthesize titleLbl, descriptionLbl, imageView;
+
+- (void)setOfferDetailData:(id)newOfferDetailData {
+    _offerDetailData = newOfferDetailData;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //[lblDetail setText:[_detailData description]];
+    
+    UIImage *img = [UIImage imageNamed: [_offerDetailData OfferImage]];
+    
+    [imageView setImage:img];
+    [titleLbl setText:[_offerDetailData OfferTitle]];
+    [descriptionLbl setText:[_offerDetailData OfferDescription]];
 }
 
 - (void)didReceiveMemoryWarning {
