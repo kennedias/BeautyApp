@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="186" id="KGk-i7-Jjw" customClass="OfferCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="101.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="paX-Ne-3kY">
+                        <rect key="frame" x="16" y="11" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="PUR-mS-hG3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa1-dl-5GE">
+                        <rect key="frame" x="104" y="40" width="200" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="f6e-BU-I2q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.98266881699999997" green="0.88161462550000003" blue="0.90144276619999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="paX-Ne-3kY" firstAttribute="top" secondItem="Pa1-dl-5GE" secondAttribute="top" constant="-29" id="3Eg-AN-Ghe"/>
+                    <constraint firstItem="Pa1-dl-5GE" firstAttribute="leading" secondItem="paX-Ne-3kY" secondAttribute="trailing" constant="8" symbolic="YES" id="Aa2-o8-L7Z"/>
+                    <constraint firstItem="paX-Ne-3kY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Glt-P2-eTM"/>
+                    <constraint firstItem="paX-Ne-3kY" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="ML7-tn-ceh"/>
+                    <constraint firstItem="Pa1-dl-5GE" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="lLg-WH-CkW"/>
+                    <constraint firstItem="paX-Ne-3kY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rko-tf-FfY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="imageView" destination="paX-Ne-3kY" id="xVz-Id-NEY"/>
+                <outlet property="titleLbl" destination="Pa1-dl-5GE" id="UC0-m0-Q5K"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="123"/>
+        </tableViewCell>
+    </objects>
+</document>

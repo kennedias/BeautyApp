@@ -11,6 +11,8 @@
 		4C2761002016AF36000F6CE0 /* OffersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2760FF2016AF36000F6CE0 /* OffersCell.m */; };
 		4C6FDFF5203C50FD0019DE3B /* MyOffersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FDFF4203C50FD0019DE3B /* MyOffersTableViewController.m */; };
 		4C6FDFF8203C52D60019DE3B /* MyOffersDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FDFF7203C52D60019DE3B /* MyOffersDetailViewController.m */; };
+		4C6FDFFB203C5CEA0019DE3B /* MyOfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FDFFA203C5CEA0019DE3B /* MyOfferCell.m */; };
+		4C6FDFFD203C5CFE0019DE3B /* MyOfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C6FDFFC203C5CFE0019DE3B /* MyOfferCell.xib */; };
 		CE025B5220198F470062D2F0 /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE025B5020198F470062D2F0 /* OfferCell.m */; };
 		CE025B5320198F470062D2F0 /* OfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE025B5120198F470062D2F0 /* OfferCell.xib */; };
 		CE099BCA202C099900BDE247 /* OfferDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE099BC9202C099900BDE247 /* OfferDetailViewController.m */; };
@@ -56,6 +58,9 @@
 		4C6FDFF4203C50FD0019DE3B /* MyOffersTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyOffersTableViewController.m; sourceTree = "<group>"; };
 		4C6FDFF6203C52D60019DE3B /* MyOffersDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyOffersDetailViewController.h; sourceTree = "<group>"; };
 		4C6FDFF7203C52D60019DE3B /* MyOffersDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyOffersDetailViewController.m; sourceTree = "<group>"; };
+		4C6FDFF9203C5CD70019DE3B /* MyOfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOfferCell.h; sourceTree = "<group>"; };
+		4C6FDFFA203C5CEA0019DE3B /* MyOfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOfferCell.m; sourceTree = "<group>"; };
+		4C6FDFFC203C5CFE0019DE3B /* MyOfferCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyOfferCell.xib; sourceTree = "<group>"; };
 		CE025B4F20198F470062D2F0 /* OfferCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfferCell.h; sourceTree = "<group>"; };
 		CE025B5020198F470062D2F0 /* OfferCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OfferCell.m; sourceTree = "<group>"; };
 		CE025B5120198F470062D2F0 /* OfferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCell.xib; sourceTree = "<group>"; };
@@ -158,6 +163,9 @@
 				CE099BC9202C099900BDE247 /* OfferDetailViewController.m */,
 				4C2760FB2016A138000F6CE0 /* OffersTableViewController.h */,
 				4C2760FC2016A138000F6CE0 /* OffersTableViewController.m */,
+				4C6FDFF9203C5CD70019DE3B /* MyOfferCell.h */,
+				4C6FDFFA203C5CEA0019DE3B /* MyOfferCell.m */,
+				4C6FDFFC203C5CFE0019DE3B /* MyOfferCell.xib */,
 				CE025B4F20198F470062D2F0 /* OfferCell.h */,
 				CE025B5020198F470062D2F0 /* OfferCell.m */,
 				CE025B5120198F470062D2F0 /* OfferCell.xib */,
@@ -303,6 +311,7 @@
 				CE497F16200C2B4E00ECD98B /* LaunchScreen.storyboard in Resources */,
 				CE497F13200C2B4E00ECD98B /* Assets.xcassets in Resources */,
 				CE497F11200C2B4E00ECD98B /* Main.storyboard in Resources */,
+				4C6FDFFD203C5CFE0019DE3B /* MyOfferCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C6FDFFB203C5CEA0019DE3B /* MyOfferCell.m in Sources */,
 				4C2761002016AF36000F6CE0 /* OffersCell.m in Sources */,
 				CE43AD4F203BB8C100B34B3F /* CreateDataViewController.m in Sources */,
 				CEDC6483203BD3840072EC0D /* LoginViewController.m in Sources */,

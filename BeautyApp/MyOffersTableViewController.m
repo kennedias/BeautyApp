@@ -53,9 +53,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.tableView registerNib:[UINib nibWithNibName:@"OfferCell" bundle:nil] forCellReuseIdentifier:@"OffersCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MyOfferCell" bundle:nil] forCellReuseIdentifier:@"MyOffersCell"];
     
-    OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OffersCell" forIndexPath:indexPath];
+    MyOfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyOffersCell" forIndexPath:indexPath];
     
     NSManagedObject *offer = [_myOffers objectAtIndex:indexPath.row];
     

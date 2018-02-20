@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OfferCell.h"
+#import "MyOfferCell.h"
 #import "AppDelegate.h"
 @import CoreData;
 
