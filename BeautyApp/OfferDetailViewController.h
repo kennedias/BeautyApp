@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "OfferVO.h"
+@import CoreData;
 
 @interface OfferDetailViewController : UIViewController
 
@@ -15,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLbl;
 @property (weak, nonatomic) IBOutlet UILabel *informationLbl;
+
+- (IBAction)addOffer:(id)sender;
 
 @end

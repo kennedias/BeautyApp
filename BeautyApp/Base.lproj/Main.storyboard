@@ -284,6 +284,9 @@
                                 <rect key="frame" x="16" y="189" width="288" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label="Add to MyOffers"/>
                                 <state key="normal" title="Add to MyOffers"/>
+                                <connections>
+                                    <action selector="addOffer:" destination="CqT-Nm-7lz" eventType="touchUpInside" id="9gX-sT-kRw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3C7-qf-D12">
                                 <rect key="frame" x="104" y="88" width="200" height="30"/>
