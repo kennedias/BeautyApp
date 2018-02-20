@@ -25,15 +25,31 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    _myOffers = [[NSMutableArray alloc] init];
     NSString *userEmail = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"];
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserOffer"];
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserOffers"];
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"email == %@", userEmail]];
     
     NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
     
+    _myOffers = [[NSMutableArray alloc] init];
     _myOffers = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSString *userEmail = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"];
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserOffers"];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"email == %@", userEmail]];
+    
+    NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
+    
+    _myOffers = [[NSMutableArray alloc] init];
+    _myOffers = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    [super viewWillAppear:animated];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -43,12 +59,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return [_myOffers count];
 }
 
@@ -59,10 +73,10 @@
     
     NSManagedObject *offer = [_myOffers objectAtIndex:indexPath.row];
     
-    UIImage *img = [UIImage imageNamed: [offer valueForKeyPath:@"image"]];
+    UIImage *img = [UIImage imageNamed: [offer valueForKeyPath:@"offerImage"]];
     [cell.imageView setImage:img];
-    [cell.titleLbl setText:[offer valueForKeyPath:@"title"]];
-    [cell.descriptionLbl setText:[offer valueForKeyPath:@"information"]];
+    [cell.titleLbl setText:[offer valueForKeyPath:@"offerTitle"]];
+    [cell.descriptionLbl setText:[offer valueForKeyPath:@"offerInformation"]];
     
     
     return cell;

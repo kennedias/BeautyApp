@@ -22,8 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [titleLbl setText:[_myOfferDetailData valueForKeyPath:@"title"]];
-    [informationLbl setText:[_myOfferDetailData valueForKeyPath:@"information"]];
+    [titleLbl setText:[_myOfferDetailData valueForKeyPath:@"offerTitle"]];
+    [informationLbl setText:[_myOfferDetailData valueForKeyPath:@"offerInformation"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +32,45 @@
 }
 
 - (IBAction)removeOffer:(id)sender{
+    
+    NSString *alertTitle;
+    NSString *alertMessage;
+    NSString *userEmail = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"];
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserOffers"];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"email == %@ AND offerTitle == %@", userEmail, [titleLbl text]]];
+    
+    NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
+    
+    NSMutableArray *_myOffers = [[NSMutableArray alloc] init];
+    _myOffers = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+
+    NSError *error;
+    NSArray *offersToDelete = [context executeFetchRequest:fetchRequest error:&error];
+
+    for (NSManagedObject *managedObject in offersToDelete)
+    {
+        [context deleteObject:managedObject];
+        NSLog(@"Register deleted!");
+    }
+
+    if (error != nil) {
+        NSLog(@"Error during delete %@ %@", error, [error localizedDescription]);
+        alertTitle = @"Error";
+        alertMessage = @"The offer could not be deleted.";
+    }else {
+       // NSLog(@"Register deleted!");
+        alertTitle = @"Success";
+        alertMessage = @"The offer have been deleted.";
+    }
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:alertTitle message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK"
+                                                 style: UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction * action){
+                                                   [alert dismissViewControllerAnimated:YES completion:nil];
+                                               }];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 /*

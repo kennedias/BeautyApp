@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface OffersCell : UITableViewCell
-@property(nonnull,strong) IBOutlet UIImageView *imageView;
+@property(nonnull,strong) IBOutlet UIImageView *offerImage;
 @property(nonnull,strong) IBOutlet UILabel *titleLbl;
 @property(nonnull,strong) IBOutlet UILabel *descriptionLbl;
 

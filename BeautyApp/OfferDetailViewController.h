@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 //#import "OfferVO.h"
 @import CoreData;
+//#import <CoreData/CoreData.h>
 
 @interface OfferDetailViewController : UIViewController
 

@@ -43,17 +43,14 @@
 */
 
 - (IBAction)addOffer:(id)sender{
+ 
+    NSString *alertTitle;
+    NSString *alertMessage;
     NSString *userEmail = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"];
     
     NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
     
     NSManagedObject *userOffers = [NSEntityDescription insertNewObjectForEntityForName:@"UserOffers" inManagedObjectContext:context];
-    
-    NSString *alertTitle;
-    NSString *alertMessage;
-    UIAlertControllerStyle * alertStyle = UIAlertControllerStyleAlert;
-
-   
     
     //Verify if there is a user with the email provided
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserOffers"];
@@ -78,7 +75,7 @@
         }else {
             NSLog(@"Register add!");
             alertTitle = @"Success";
-            alertMessage = @"The offer have added with to your list.";
+            alertMessage = @"The offer have been added to your list.";
         }
         
 
@@ -86,7 +83,7 @@
         alertTitle = @"Relax";
         alertMessage = @"Offer already in your list.";
     }
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:alertTitle message:alertMessage preferredStyle:alertStyle];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:alertTitle message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK"
                                                  style: UIAlertActionStyleDefault
                                                handler:^(UIAlertAction * action){

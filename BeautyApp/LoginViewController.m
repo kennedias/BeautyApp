@@ -24,7 +24,7 @@
     NSString *userEmail = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"];
     
     if(userEmail){
-        AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+        AppDelegate *appDelegateTemp = (AppDelegate*)[[UIApplication sharedApplication]delegate];
         appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];        
     }
     
@@ -73,7 +73,7 @@
                 [[NSUserDefaults standardUserDefaults] setObject:[tbxEmail text] forKey:@"UserEmail"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 
-                AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+                AppDelegate *appDelegateTemp = (AppDelegate*)[[UIApplication sharedApplication]delegate];
                 appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];                
             }else{
                 [lblSystemMessage setText:@"Invalid password."];
