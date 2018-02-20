@@ -2,7 +2,7 @@
 //  OffersCell.h
 //  BeautyApp
 //
-//  Created by Tawny Almeida on 23/1/18.
+//  Created by 5399 on 23/1/18.
 //  Copyright © 2018 5399. All rights reserved.
 //
 

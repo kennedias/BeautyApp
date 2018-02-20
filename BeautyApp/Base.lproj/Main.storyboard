@@ -127,58 +127,17 @@
             </objects>
             <point key="canvasLocation" x="180" y="-307"/>
         </scene>
-        <!--My Offers-->
-        <scene sceneID="avl-fa-4TZ">
-            <objects>
-                <tableViewController title="My Offers" id="DKD-u4-w2T" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T3P-q7-Okf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DPX-r9-7Jb">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DPX-r9-7Jb" id="l3j-FI-Upx">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coupon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMx-8i-iMx">
-                                            <rect key="frame" x="16" y="12" width="110" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="qu5-tw-kgi" kind="showDetail" id="ANt-21-2jj"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="DKD-u4-w2T" id="XRk-Nr-Xf6"/>
-                            <outlet property="delegate" destination="DKD-u4-w2T" id="AKA-ac-2wv"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="vqk-p9-uE7"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nhE-dt-Qq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="926" y="382"/>
-        </scene>
         <!--My Coupons List-->
         <scene sceneID="4l8-BI-EHU">
             <objects>
                 <navigationController title="My Coupons List" id="kz4-6W-GUQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Offers" id="Bdm-Os-usZ" userLabel="My Coupons List"/>
+                    <tabBarItem key="tabBarItem" title="My Offers" id="Bdm-Os-usZ" userLabel="My Offers List"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ibD-gx-tx1">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="DKD-u4-w2T" kind="relationship" relationship="rootViewController" id="krv-dE-QiG"/>
+                        <segue destination="NO2-HO-aZk" kind="relationship" relationship="rootViewController" id="Nsx-9I-A4Y"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sY7-ld-Uxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -263,7 +222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kms-ls-Pyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="-1120"/>
+            <point key="canvasLocation" x="1067" y="-1123"/>
         </scene>
         <!--Offer Detail View Controller-->
         <scene sceneID="zRV-Og-zRU">
@@ -605,6 +564,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePR-kV-LUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1470" y="351.76056338028167"/>
+        </scene>
+        <!--MyOffers-->
+        <scene sceneID="Xfr-sh-kdt">
+            <objects>
+                <tableViewController storyboardIdentifier="OfferDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NO2-HO-aZk" customClass="OffersTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fIP-wl-c50">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="offersCell" rowHeight="103" id="eb1-TV-CMh" customClass="OffersCell">
+                                <rect key="frame" x="0.0" y="28" width="320" height="103"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eb1-TV-CMh" id="6eO-Ot-FuP">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="102.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.98266881699999997" green="0.88161462550000003" blue="0.90144276619999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90802651639999998" green="0.1202151105" blue="0.38124033810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NO2-HO-aZk" id="FsM-eX-ROP"/>
+                            <outlet property="delegate" destination="NO2-HO-aZk" id="ZPB-jJ-xLH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MyOffers" id="1RX-rW-S4F">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="MrE-DX-AyV">
+                            <connections>
+                                <action selector="Logout:" destination="NO2-HO-aZk" id="d1g-bL-n1t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmz-xf-yxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="380"/>
         </scene>
     </scenes>
     <resources>

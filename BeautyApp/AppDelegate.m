@@ -22,6 +22,7 @@
     
     /* INSERT DATA - Use for data generate */
    // UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"CreateDataViewController"];
+    self.generateData;
     
     UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
     UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
@@ -99,6 +100,55 @@
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
+    }
+}
+
+- (void)generateData {
+
+    NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
+    
+    //Verify if there is a user with the email provided
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Offer"];
+    
+    NSMutableArray *_offers = [[NSMutableArray alloc] init];
+    _offers = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    //If the offer is already inserted for the email it will no be inserted again.
+    if (![_offers count]){
+        NSManagedObject *offer = [NSEntityDescription insertNewObjectForEntityForName:@"Offer" inManagedObjectContext:context];
+        
+        [offer setValue:@"Hair" forKey:@"title"];
+        [offer setValue:@"Your hair will be done carefully!" forKey:@"information"];
+        [offer setValue:@"beauti_ico" forKey:@"image"];
+        
+        NSManagedObject *offer2 = [NSEntityDescription insertNewObjectForEntityForName:@"Offer" inManagedObjectContext:context];
+        
+        [offer2 setValue:@"Beaty Nails" forKey:@"title"];
+        [offer2 setValue:@"Change your favorite color and style.!" forKey:@"information"];
+        [offer2 setValue:@"beauti_ico" forKey:@"image"];
+        
+        NSManagedObject *offer3 = [NSEntityDescription insertNewObjectForEntityForName:@"Offer" inManagedObjectContext:context];
+        
+        [offer3 setValue:@"Brazilian Wax" forKey:@"title"];
+        [offer3 setValue:@"The most wanted wax method now with a special price.!" forKey:@"information"];
+        [offer3 setValue:@"beauti_ico" forKey:@"image"];
+        
+        NSManagedObject *offer4 = [NSEntityDescription insertNewObjectForEntityForName:@"Offer" inManagedObjectContext:context];
+        
+        [offer4 setValue:@"Skin Flower" forKey:@"title"];
+        [offer4 setValue:@"Your skin soft as a rose!" forKey:@"information"];
+        [offer4 setValue:@"beauti_ico" forKey:@"image"];
+        
+        NSError *error = nil;
+        
+        [context save:&error];
+        
+        if (error != nil) {
+            NSLog(@"Error during insert %@ %@", error, [error localizedDescription]);
+        } else {
+            NSLog(@"Data created! ");
+        }
+        
     }
 }
 

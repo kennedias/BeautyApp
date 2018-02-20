@@ -71,6 +71,24 @@
                 if (error != nil) {
                     NSLog(@"Error during insert %@ %@", error, [error localizedDescription]);
                 } else {
+                    
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"My Alert"
+                                                                                   message:@"This is an action sheet."
+                                                                            preferredStyle:UIAlertControllerStyleActionSheet]; // 1
+                    UIAlertAction *firstAction = [UIAlertAction actionWithTitle:@"one"
+                                                                          style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                                                                              NSLog(@"You pressed button one");
+                                                                          }]; // 2
+                    UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"two"
+                                                                           style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                                                                               NSLog(@"You pressed button two");
+                                                                           }]; // 3
+                    
+                    [alert addAction:firstAction]; // 4
+                    [alert addAction:secondAction]; // 5
+                    
+                    [self presentViewController:alert animated:YES completion:nil];
+                    
                     [[NSUserDefaults standardUserDefaults] setObject:[tbxEmail text] forKey:@"UserEmail"];
                     [[NSUserDefaults standardUserDefaults] synchronize];
                     AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];

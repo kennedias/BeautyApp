@@ -1,8 +1,8 @@
 //
-//  OffersTableViewController.h
+//  MyOffersTableViewController.h
 //  BeautyApp
 //
-//  Created by 5399 on 23/1/18.
+//  Created by 5399 on 20/2/18.
 //  Copyright © 2018 5399. All rights reserved.
 //
 
@@ -11,13 +11,11 @@
 #import "AppDelegate.h"
 @import CoreData;
 
-@interface OffersTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MyOffersTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 {
-    NSMutableArray *_offers;
+    NSMutableArray *_myOffers;
     NSManagedObjectContext *_managedContext;
 }
 - (IBAction)Logout:(id)sender;
 
-
 @end
-

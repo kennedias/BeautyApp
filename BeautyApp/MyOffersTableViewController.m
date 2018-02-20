@@ -1,17 +1,18 @@
+//
+//  MyOffersTableViewController.m
+//  BeautyApp
+//
+//  Created by 5399 on 20/2/18.
+//  Copyright © 2018 5399. All rights reserved.
+//
 
+#import "MyOffersTableViewController.h"
 
-#import "OffersTableViewController.h"
-//#import "OfferVO.h"
-#import "OfferDetailViewController.h"
-//#import "OfferCell.h"
-#import "LoginViewController.h"
-
-@interface OffersTableViewController (){
-}
+@interface MyOffersTableViewController ()
 
 @end
 
-@implementation OffersTableViewController
+@implementation MyOffersTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,16 +22,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    _offers = [[NSMutableArray alloc] init];
-    
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Offer"];
-    
-    NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
-    
-    _offers = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,36 +32,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return [_offers count];
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.tableView registerNib:[UINib nibWithNibName:@"OfferCell" bundle:nil] forCellReuseIdentifier:@"OffersCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OffersCell" forIndexPath:indexPath];
-
-    NSManagedObject *offer = [_offers objectAtIndex:indexPath.row];   
-   
-    UIImage *img = [UIImage imageNamed: [offer valueForKeyPath:@"image"]];
-    [cell.imageView setImage:img];
-    [cell.titleLbl setText:[offer valueForKeyPath:@"title"]];
-    [cell.descriptionLbl setText:[offer valueForKeyPath:@"information"]];
-    
+    // Configure the cell...
     
     return cell;
 }
-
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"showOfferDetail" sender:indexPath];
-    return indexPath;
-}
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -106,35 +85,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqualToString:@"showOfferDetail"]) {
-        NSIndexPath *indexPath = (NSIndexPath *)sender;
-        
-        NSData *object = [_offers objectAtIndex:indexPath.row];
-        
-        [[segue destinationViewController] setOfferDetailData:object];
-        
-    }
 }
-
-- (IBAction)Logout:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"UserEmail"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-       
-    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    [self.navigationController pushViewController:loginViewController animated:YES];
-  
-    //UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    //UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    //[self.navigationController pushViewController:vc animeted:YES];
-}
-
-
+*/
 
 @end
