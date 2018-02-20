@@ -22,21 +22,14 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    _offers = [NSMutableArray array];
+    _offers = [[NSMutableArray alloc] init];
     
-    OfferVO *offer1 = [[OfferVO alloc] init];
-    [offer1 setOfferImage:@"beauti_ico"];
-    [offer1 setOfferTitle:@"Clear Skin"];
-    [offer1 setOfferDescription:@"The best treatment for your skin!"];
-    [_offers addObject:offer1];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Offer"];
     
-    OfferVO *offer2 = [[OfferVO alloc] init];
-    [offer2 setOfferImage:@"beauti_ico"];
-    [offer2 setOfferTitle:@"Hair"];
-    [offer2 setOfferDescription:@"Your hair will be done carefully"];
+    NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
     
-    [_offers addObject:offer2];
-    
+    _offers = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+  
   /*  titles = [[NSArray alloc]initWithObjects:@"Clear Skin", @"Hair", @"Beaty Nails", @"Brazilian Wax", nil];
     descriptions = [[NSArray alloc]initWithObjects:
                     @"The best treatment for your skin!",
@@ -86,20 +79,20 @@
     
     //[cell updateCellWithTitle:[titles objectAtIndex:indexPath.row] description:[descriptions objectAtIndex:indexPath.row] image:[images objectAtIndex:indexPath.row]];
     
-    OfferVO *item = [_offers objectAtIndex:indexPath.row];
-    
-    UIImage *img = [UIImage imageNamed: [item OfferImage]];
+    NSManagedObject *offer = [_offers objectAtIndex:indexPath.row];   
+   
+    UIImage *img = [UIImage imageNamed: [offer valueForKeyPath:@"image"]]];
     [cell.imageView setImage:img];
-    [cell.titleLbl setText:[item OfferTitle]];
-    [cell.descriptionLbl setText:[item OfferDescription]];
+    [cell.titleLbl setText:[offer valueForKeyPath:@"title"]]];
+    [cell.descriptionLbl setText:[offer valueForKeyPath:@"information"]]];
     
     
     return cell;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"showOfferDetail" sender:nil];
-    return nil;
+    [self performSegueWithIdentifier:@"showOfferDetail" sender:indexPath];
+    return indexPath;
 }
 
 
@@ -145,7 +138,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"showOfferDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
         
         NSData *object = [_offers objectAtIndex:indexPath.row];
         

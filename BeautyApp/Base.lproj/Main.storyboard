@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FB2-cJ-254">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYr-z0-KVI">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -382,6 +382,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfp-L8-8e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1908.75" y="-1122.8873239436621"/>
+        </scene>
+        <!--Create Data-->
+        <scene sceneID="Edc-Xf-nEJ">
+            <objects>
+                <viewController title="Create Data" id="NYr-z0-KVI" customClass="CreateDataViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R43-mJ-szb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEZ-Om-PtD">
+                                <rect key="frame" x="16" y="20" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0za-EA-zYJ">
+                                <rect key="frame" x="16" y="58" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77648428038434136" green="1" blue="0.81774824327118134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Create Data"/>
+                                <connections>
+                                    <action selector="CreateData:" destination="NYr-z0-KVI" eventType="touchUpInside" id="zyD-nc-bXn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XEZ-Om-PtD" firstAttribute="top" secondItem="o15-hF-aom" secondAttribute="top" id="6dq-jh-wTt"/>
+                            <constraint firstItem="XEZ-Om-PtD" firstAttribute="leading" secondItem="R43-mJ-szb" secondAttribute="leadingMargin" id="BZ4-v7-9Fu"/>
+                            <constraint firstItem="XEZ-Om-PtD" firstAttribute="trailing" secondItem="R43-mJ-szb" secondAttribute="trailingMargin" id="vLk-gh-bud"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o15-hF-aom"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ma-8g-y6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2248.125" y="-1090.1408450704225"/>
         </scene>
         <!--Offers-->
         <scene sceneID="99g-T9-FIv">

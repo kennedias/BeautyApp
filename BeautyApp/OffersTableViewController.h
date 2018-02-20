@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "OfferCell.h"
+#import "AppDelegate.h"
+@import CoreData;
 
 @interface OffersTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 {
-    NSArray *titles;
-    NSArray *descriptions;
-    NSArray *images;
     NSMutableArray *_offers;
+    NSManagedObjectContext *_managedContext;
 }
 @end
 
