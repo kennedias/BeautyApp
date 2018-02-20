@@ -10,9 +10,9 @@
 
 @interface OfferVO : NSObject
 
-@property (nonatomic) NSString *OfferImage;
-@property (nonatomic) NSString *OfferTitle;
-@property (nonatomic) NSString *OfferDescription;
+@property (nonatomic) NSString *offerImage;
+@property (nonatomic) NSString *offerTitle;
+@property (nonatomic) NSString *offerInformation;
 
 
 @end

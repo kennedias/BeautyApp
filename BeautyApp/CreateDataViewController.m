@@ -39,9 +39,21 @@
     
     NSManagedObject *offer = [NSEntityDescription insertNewObjectForEntityForName:@"Offer" inManagedObjectContext:context];
     
-    [offer setValue:@"Clear Skin X" forKey:@"title"];
-    [offer setValue:@"The best treatment for your skinX!" forKey:@"information"];
+    [offer setValue:@"Hair" forKey:@"title"];
+    [offer setValue:@"Your hair will be done carefully!" forKey:@"information"];
     [offer setValue:@"beauti_ico" forKey:@"image"];
+  
+    NSManagedObject *offer2 = [NSEntityDescription insertNewObjectForEntityForName:@"Offer" inManagedObjectContext:context];
+    
+    [offer2 setValue:@"Beaty Nails" forKey:@"title"];
+    [offer2 setValue:@"Change your favorite color and style.!" forKey:@"information"];
+    [offer2 setValue:@"beauti_ico" forKey:@"image"];
+    
+    NSManagedObject *offer3 = [NSEntityDescription insertNewObjectForEntityForName:@"Offer" inManagedObjectContext:context];
+    
+    [offer3 setValue:@"Brazilian Wax" forKey:@"title"];
+    [offer3 setValue:@"The most wanted wax method now with a special price.!" forKey:@"information"];
+    [offer3 setValue:@"beauti_ico" forKey:@"image"];
     
     NSError *error = nil;
     

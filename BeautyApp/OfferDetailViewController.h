@@ -14,6 +14,6 @@
 @property (strong, nonatomic) id offerDetailData;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLbl;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLbl;
+@property (weak, nonatomic) IBOutlet UILabel *informationLbl;
 
 @end

@@ -10,6 +10,6 @@
 
 @implementation OfferVO
 
-@synthesize OfferImage, OfferTitle, OfferDescription;
+@synthesize offerImage, offerTitle, offerInformation;
 
 @end

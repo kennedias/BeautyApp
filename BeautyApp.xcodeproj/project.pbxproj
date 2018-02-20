@@ -24,6 +24,8 @@
 		CE497F19200C2B4E00ECD98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F18200C2B4E00ECD98B /* main.m */; };
 		CE497F23200C2B4E00ECD98B /* BeautyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F22200C2B4E00ECD98B /* BeautyAppTests.m */; };
 		CE497F2E200C2B4F00ECD98B /* BeautyAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F2D200C2B4F00ECD98B /* BeautyAppUITests.m */; };
+		CEDC6480203BD36C0072EC0D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC647F203BD36C0072EC0D /* SignUpViewController.m */; };
+		CEDC6483203BD3840072EC0D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC6482203BD3840072EC0D /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,10 @@
 		CE497F29200C2B4E00ECD98B /* BeautyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE497F2D200C2B4F00ECD98B /* BeautyAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeautyAppUITests.m; sourceTree = "<group>"; };
 		CE497F2F200C2B4F00ECD98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDC647E203BD36C0072EC0D /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		CEDC647F203BD36C0072EC0D /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		CEDC6481203BD3840072EC0D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CEDC6482203BD3840072EC0D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,10 @@
 				CE43AD47203B9EED00B34B3F /* BeautyModel.xcdatamodeld */,
 				CE43AD4D203BB8C100B34B3F /* CreateDataViewController.h */,
 				CE43AD4E203BB8C100B34B3F /* CreateDataViewController.m */,
+				CEDC647E203BD36C0072EC0D /* SignUpViewController.h */,
+				CEDC647F203BD36C0072EC0D /* SignUpViewController.m */,
+				CEDC6481203BD3840072EC0D /* LoginViewController.h */,
+				CEDC6482203BD3840072EC0D /* LoginViewController.m */,
 			);
 			path = BeautyApp;
 			sourceTree = "<group>";
@@ -309,6 +319,8 @@
 			files = (
 				4C2761002016AF36000F6CE0 /* OffersCell.m in Sources */,
 				CE43AD4F203BB8C100B34B3F /* CreateDataViewController.m in Sources */,
+				CEDC6483203BD3840072EC0D /* LoginViewController.m in Sources */,
+				CEDC6480203BD36C0072EC0D /* SignUpViewController.m in Sources */,
 				CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */,
 				CE497F19200C2B4E00ECD98B /* main.m in Sources */,
 				CE099BCA202C099900BDE247 /* OfferDetailViewController.m in Sources */,

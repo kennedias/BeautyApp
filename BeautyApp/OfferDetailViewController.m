@@ -14,7 +14,7 @@
 
 @implementation OfferDetailViewController
 
-@synthesize titleLbl, descriptionLbl, imageView;
+@synthesize titleLbl, informationLbl, imageView;
 
 - (void)setOfferDetailData:(id)newOfferDetailData {
     _offerDetailData = newOfferDetailData;
@@ -25,11 +25,14 @@
     // Do any additional setup after loading the view.
     //[lblDetail setText:[_detailData description]];
     
-    UIImage *img = [UIImage imageNamed: [_offerDetailData OfferImage]];
+    //UIImage *img = [UIImage imageNamed: [_offerDetailData valueForKeyPath:image]];
+    //UIImage *img = [UIImage imageNamed: [_offerDetailData image]];
     
-    [imageView setImage:img];
-    [titleLbl setText:[_offerDetailData OfferTitle]];
-    [descriptionLbl setText:[_offerDetailData OfferDescription]];
+    //[imageView setImage:img];
+    //NSLog(@"%@", _offerDetailData);
+    
+    [titleLbl setText:[_offerDetailData valueForKeyPath:@"title"]];
+    [informationLbl setText:[_offerDetailData valueForKeyPath:@"information"]];
 }
 
 - (void)didReceiveMemoryWarning {

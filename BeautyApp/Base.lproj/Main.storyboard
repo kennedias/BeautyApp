@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYr-z0-KVI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FB2-cJ-254">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -327,7 +327,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX0-4i-jdr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX0-4i-jdr">
                                 <rect key="frame" x="104" y="118" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Hgk-Ba-2FF"/>
@@ -374,8 +374,8 @@
                         <viewLayoutGuide key="safeArea" id="C8j-7l-LYc"/>
                     </view>
                     <connections>
-                        <outlet property="descriptionLbl" destination="yX0-4i-jdr" id="8bF-mP-iNt"/>
                         <outlet property="imageView" destination="5U6-iZ-i6d" id="SfN-I6-KN1"/>
+                        <outlet property="informationLbl" destination="yX0-4i-jdr" id="pjJ-BU-Riy"/>
                         <outlet property="titleLbl" destination="3C7-qf-D12" id="ul3-iS-jZX"/>
                     </connections>
                 </viewController>
@@ -451,7 +451,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3qz-Wf-Wjg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3qz-Wf-Wjg">
                                 <rect key="frame" x="16" y="152" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -538,10 +538,10 @@
             </objects>
             <point key="canvasLocation" x="-666" y="-207"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="x33-m5-pTt">
             <objects>
-                <viewController id="vVh-ml-4u9" sceneMemberID="viewController">
+                <viewController id="vVh-ml-4u9" customClass="SignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Apt-vx-bba">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,7 +552,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMK-C1-bdw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMK-C1-bdw">
                                 <rect key="frame" x="16" y="126" width="288" height="21"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -593,6 +593,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="SignUp:" destination="vVh-ml-4u9" eventType="touchUpInside" id="LxE-OW-TIN"/>
                                     <segue destination="f6Y-dL-3gS" kind="show" id="sN5-rK-u2e"/>
                                 </connections>
                             </button>
@@ -623,6 +624,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Br1-oE-Yjq"/>
                     </view>
+                    <connections>
+                        <outlet property="tbxConfirmPassword" destination="n8v-yD-NtR" id="q4m-OC-KjM"/>
+                        <outlet property="tbxEmail" destination="PyT-5A-lux" id="qYA-ae-Ta3"/>
+                        <outlet property="tbxPassword" destination="Bna-6E-C4R" id="5qJ-J5-jjg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePR-kV-LUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -633,7 +639,7 @@
         <image name="beauti_ico" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="soX-7H-Kb6"/>
+        <segue reference="sN5-rK-u2e"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

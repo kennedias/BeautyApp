@@ -81,10 +81,10 @@
     
     NSManagedObject *offer = [_offers objectAtIndex:indexPath.row];   
    
-    UIImage *img = [UIImage imageNamed: [offer valueForKeyPath:@"image"]]];
+    UIImage *img = [UIImage imageNamed: [offer valueForKeyPath:@"image"]];
     [cell.imageView setImage:img];
-    [cell.titleLbl setText:[offer valueForKeyPath:@"title"]]];
-    [cell.descriptionLbl setText:[offer valueForKeyPath:@"information"]]];
+    [cell.titleLbl setText:[offer valueForKeyPath:@"title"]];
+    [cell.descriptionLbl setText:[offer valueForKeyPath:@"information"]];
     
     
     return cell;
