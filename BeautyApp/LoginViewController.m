@@ -20,6 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [lblSystemMessage setText:@""];
+    
+    NSString *userEmail = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"];
+    
+    if(userEmail){
+        AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+        appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];        
+    }
+    
+    
+
+    
     // Do any additional setup after loading the view.
 }
 

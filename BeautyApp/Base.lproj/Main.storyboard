@@ -250,7 +250,13 @@
                             <outlet property="delegate" destination="bcm-h5-yGK" id="vmn-ns-n9V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Offers" id="DBC-DO-UMc"/>
+                    <navigationItem key="navigationItem" title="Offers" id="DBC-DO-UMc">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="Zer-J7-96v">
+                            <connections>
+                                <action selector="Logout:" destination="bcm-h5-yGK" id="uDj-8f-8Nj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="CqT-Nm-7lz" kind="show" identifier="showOfferDetail" id="DgZ-CC-i0Y"/>
                     </connections>
@@ -328,7 +334,7 @@
         <!--Create Data-->
         <scene sceneID="Edc-Xf-nEJ">
             <objects>
-                <viewController title="Create Data" id="NYr-z0-KVI" customClass="CreateDataViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateDataViewController" title="Create Data" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NYr-z0-KVI" customClass="CreateDataViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R43-mJ-szb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

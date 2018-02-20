@@ -4,6 +4,7 @@
 #import "OfferVO.h"
 #import "OfferDetailViewController.h"
 #import "OfferCell.h"
+#import "LoginViewController.h"
 
 @interface OffersTableViewController (){
 }
@@ -121,6 +122,19 @@
         
     }
 }
+
+- (IBAction)Logout:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"UserEmail"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+       
+    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self.navigationController pushViewController:loginViewController animated:YES];
+  
+    //UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    //[self.navigationController pushViewController:vc animeted:YES];
+}
+
 
 
 @end
