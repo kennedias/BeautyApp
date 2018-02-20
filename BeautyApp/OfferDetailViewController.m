@@ -22,15 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    //[lblDetail setText:[_detailData description]];
     
-    //UIImage *img = [UIImage imageNamed: [_offerDetailData valueForKeyPath:image]];
-    //UIImage *img = [UIImage imageNamed: [_offerDetailData image]];
-    
-    //[imageView setImage:img];
-    //NSLog(@"%@", _offerDetailData);
-    
+    NSString *userEmail = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"];
+    //[titleLbl setText:userEmail];
     [titleLbl setText:[_offerDetailData valueForKeyPath:@"title"]];
     [informationLbl setText:[_offerDetailData valueForKeyPath:@"information"]];
 }

@@ -6,7 +6,6 @@
 #import "OfferCell.h"
 
 @interface OffersTableViewController (){
-   // NSArray *offers;
 }
 
 @end
@@ -29,18 +28,6 @@
     NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
     
     _offers = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
-  
-  /*  titles = [[NSArray alloc]initWithObjects:@"Clear Skin", @"Hair", @"Beaty Nails", @"Brazilian Wax", nil];
-    descriptions = [[NSArray alloc]initWithObjects:
-                    @"The best treatment for your skin!",
-                    @"Your hair will be done carefully",
-                    @"Change your favorite color and style.",
-                    @"The most wanted wax method now with a special price.", nil];
-    //UIImage *imageIco = [UIImage imageNamed:@"beauti_ico"];
-    images = [[NSArray alloc]initWithObjects: @"beauti_ico", @"beauti_ico", @"beauti_ico", @"beauti_ico", nil];
-    */
-
-    NSLog(@"%@", _offers);
     
     
 }
@@ -66,19 +53,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"OfferCell" bundle:nil] forCellReuseIdentifier:@"OffersCell"];
     
     OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OffersCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    //cell.imageView.image = [UIImage imageNamed:@"beauti_ico"];
-    //cell.textLabel.text = offers[indexPath.row];
-    //[cell.titleLbl setText:[titles objectAtIndex:indexPath.row]];
-    //[cell.descriptionLbl setText:[descriptions objectAtIndex:indexPath.row]];
-    
-    //UIImage *img = [UIImage imageNamed:@"beauti_ico"];
-    
-    //[cell.imageView setImage:img];
-    
-    //[cell updateCellWithTitle:[titles objectAtIndex:indexPath.row] description:[descriptions objectAtIndex:indexPath.row] image:[images objectAtIndex:indexPath.row]];
-    
+
     NSManagedObject *offer = [_offers objectAtIndex:indexPath.row];   
    
     UIImage *img = [UIImage imageNamed: [offer valueForKeyPath:@"image"]];

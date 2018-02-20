@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *tbxEmail;
 @property (weak, nonatomic) IBOutlet UITextField *tbxPassword;
 @property (weak, nonatomic) IBOutlet UITextField *tbxConfirmPassword;
+@property (weak, nonatomic) IBOutlet UILabel *lblSystemMessage;
 
 - (IBAction)SignUp:(id)sender;
 

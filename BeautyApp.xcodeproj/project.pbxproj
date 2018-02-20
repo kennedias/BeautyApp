@@ -26,6 +26,7 @@
 		CE497F2E200C2B4F00ECD98B /* BeautyAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F2D200C2B4F00ECD98B /* BeautyAppUITests.m */; };
 		CEDC6480203BD36C0072EC0D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC647F203BD36C0072EC0D /* SignUpViewController.m */; };
 		CEDC6483203BD3840072EC0D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC6482203BD3840072EC0D /* LoginViewController.m */; };
+		CEDC6486203C00690072EC0D /* UserVO.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC6485203C00690072EC0D /* UserVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		CEDC647F203BD36C0072EC0D /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		CEDC6481203BD3840072EC0D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CEDC6482203BD3840072EC0D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CEDC6484203C00690072EC0D /* UserVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserVO.h; sourceTree = "<group>"; };
+		CEDC6485203C00690072EC0D /* UserVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserVO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				CEDC647F203BD36C0072EC0D /* SignUpViewController.m */,
 				CEDC6481203BD3840072EC0D /* LoginViewController.h */,
 				CEDC6482203BD3840072EC0D /* LoginViewController.m */,
+				CEDC6484203C00690072EC0D /* UserVO.h */,
+				CEDC6485203C00690072EC0D /* UserVO.m */,
 			);
 			path = BeautyApp;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */,
 				CE497F19200C2B4E00ECD98B /* main.m in Sources */,
 				CE099BCA202C099900BDE247 /* OfferDetailViewController.m in Sources */,
+				CEDC6486203C00690072EC0D /* UserVO.m in Sources */,
 				CE025B5220198F470062D2F0 /* OfferCell.m in Sources */,
 				CE22087E202D4CBF00C50152 /* OfferVO.m in Sources */,
 				4C2760FD2016A138000F6CE0 /* OffersTableViewController.m in Sources */,
