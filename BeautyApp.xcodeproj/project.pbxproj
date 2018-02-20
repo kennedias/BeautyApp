@@ -19,7 +19,6 @@
 		CE43AD49203B9EED00B34B3F /* BeautyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE43AD47203B9EED00B34B3F /* BeautyModel.xcdatamodeld */; };
 		CE43AD4F203BB8C100B34B3F /* CreateDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43AD4E203BB8C100B34B3F /* CreateDataViewController.m */; };
 		CE497F0B200C2B4E00ECD98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F0A200C2B4E00ECD98B /* AppDelegate.m */; };
-		CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE497F0D200C2B4E00ECD98B /* ViewController.m */; };
 		CE497F11200C2B4E00ECD98B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE497F0F200C2B4E00ECD98B /* Main.storyboard */; };
 		CE497F13200C2B4E00ECD98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE497F12200C2B4E00ECD98B /* Assets.xcassets */; };
 		CE497F16200C2B4E00ECD98B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE497F14200C2B4E00ECD98B /* LaunchScreen.storyboard */; };
@@ -72,8 +71,6 @@
 		CE497F06200C2B4E00ECD98B /* BeautyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE497F09200C2B4E00ECD98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE497F0A200C2B4E00ECD98B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE497F0C200C2B4E00ECD98B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE497F0D200C2B4E00ECD98B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CE497F10200C2B4E00ECD98B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE497F12200C2B4E00ECD98B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE497F15200C2B4E00ECD98B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,25 +154,23 @@
 				4C6FDFF7203C52D60019DE3B /* MyOffersDetailViewController.m */,
 				4C6FDFF3203C50FD0019DE3B /* MyOffersTableViewController.h */,
 				4C6FDFF4203C50FD0019DE3B /* MyOffersTableViewController.m */,
+				CE099BC8202C099900BDE247 /* OfferDetailViewController.h */,
+				CE099BC9202C099900BDE247 /* OfferDetailViewController.m */,
+				4C2760FB2016A138000F6CE0 /* OffersTableViewController.h */,
+				4C2760FC2016A138000F6CE0 /* OffersTableViewController.m */,
 				CE025B4F20198F470062D2F0 /* OfferCell.h */,
 				CE025B5020198F470062D2F0 /* OfferCell.m */,
 				CE025B5120198F470062D2F0 /* OfferCell.xib */,
-				CE099BC8202C099900BDE247 /* OfferDetailViewController.h */,
-				CE099BC9202C099900BDE247 /* OfferDetailViewController.m */,
 				4C2760FE2016AF36000F6CE0 /* OffersCell.h */,
 				4C2760FF2016AF36000F6CE0 /* OffersCell.m */,
 				CE1C8C43200DB5B7002F1BF4 /* OffersController.h */,
 				CE1C8C44200DB5B7002F1BF4 /* OffersController.m */,
-				4C2760FB2016A138000F6CE0 /* OffersTableViewController.h */,
-				4C2760FC2016A138000F6CE0 /* OffersTableViewController.m */,
 				CE22087C202D4CBF00C50152 /* OfferVO.h */,
 				CE22087D202D4CBF00C50152 /* OfferVO.m */,
 				CEDC647E203BD36C0072EC0D /* SignUpViewController.h */,
 				CEDC647F203BD36C0072EC0D /* SignUpViewController.m */,
 				CEDC6484203C00690072EC0D /* UserVO.h */,
 				CEDC6485203C00690072EC0D /* UserVO.m */,
-				CE497F0C200C2B4E00ECD98B /* ViewController.h */,
-				CE497F0D200C2B4E00ECD98B /* ViewController.m */,
 			);
 			path = BeautyApp;
 			sourceTree = "<group>";
@@ -336,7 +331,6 @@
 				CE43AD4F203BB8C100B34B3F /* CreateDataViewController.m in Sources */,
 				CEDC6483203BD3840072EC0D /* LoginViewController.m in Sources */,
 				CEDC6480203BD36C0072EC0D /* SignUpViewController.m in Sources */,
-				CE497F0E200C2B4E00ECD98B /* ViewController.m in Sources */,
 				CE497F19200C2B4E00ECD98B /* main.m in Sources */,
 				4C6FDFF8203C52D60019DE3B /* MyOffersDetailViewController.m in Sources */,
 				CE099BCA202C099900BDE247 /* OfferDetailViewController.m in Sources */,

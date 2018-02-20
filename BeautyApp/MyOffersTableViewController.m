@@ -7,6 +7,8 @@
 //
 
 #import "MyOffersTableViewController.h"
+#import "MyOffersDetailViewController.h"
+#import "LoginViewController.h"
 
 @interface MyOffersTableViewController ()
 
@@ -22,6 +24,15 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    _myOffers = [[NSMutableArray alloc] init];
+    NSString *userEmail = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserOffer"];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"email == %@", userEmail]];
+    
+    NSManagedObjectContext *context = [[[[UIApplication sharedApplication] delegate] performSelector:@selector(persistentContainer)] viewContext];
+    
+    _myOffers = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,23 +44,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return [_myOffers count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    [self.tableView registerNib:[UINib nibWithNibName:@"OfferCell" bundle:nil] forCellReuseIdentifier:@"OffersCell"];
     
-    // Configure the cell...
+    OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OffersCell" forIndexPath:indexPath];
+    
+    NSManagedObject *offer = [_myOffers objectAtIndex:indexPath.row];
+    
+    UIImage *img = [UIImage imageNamed: [offer valueForKeyPath:@"image"]];
+    [cell.imageView setImage:img];
+    [cell.titleLbl setText:[offer valueForKeyPath:@"title"]];
+    [cell.descriptionLbl setText:[offer valueForKeyPath:@"information"]];
+    
     
     return cell;
 }
-*/
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"showMyOfferDetail" sender:indexPath];
+    return indexPath;
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -85,14 +107,32 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showMyOfferDetail"]) {
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        
+        NSData *object = [_myOffers objectAtIndex:indexPath.row];
+        
+        [[segue destinationViewController] setMyOfferDetailData:object];
+        
+    }
 }
-*/
+
+- (IBAction)Logout:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"UserEmail"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self.navigationController pushViewController:loginViewController animated:YES];
+    
+    //UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    //[self.navigationController pushViewController:vc animeted:YES];
+}
 
 @end

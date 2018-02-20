@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="180" y="382"/>
         </scene>
-        <!--View Controller-->
+        <!--My Offers Detail View Controller-->
         <scene sceneID="HR9-8b-yBJ">
             <objects>
-                <viewController id="qu5-tw-kgi" sceneMemberID="viewController">
+                <viewController id="qu5-tw-kgi" customClass="MyOffersDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9qc-AX-4gI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -597,6 +597,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="qu5-tw-kgi" kind="show" identifier="showMyOfferDetail" id="gdE-WP-Gvr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmz-xf-yxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
